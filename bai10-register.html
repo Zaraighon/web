@@ -18,22 +18,30 @@
             <a href="bai10-register.html">Đăng ký</a>
         </p>
         <h1 align="center">ĐĂNG KÝ THAM GIA DIỄN ĐÀN</h1>
+        <form action="" method="get">
         <table border="1px" width = "50%" align="center" bgcolor="yellow">
-            <tr><th width = "50%" align="left">Tên đăng nhập:</th><th align="left"><input type ="text" placeholder="Nhập tên đăng nhập"/></th></tr>
-            <tr><th width = "50%" align="left">Mật khẩu:</th><th align="left"><input type ="text"/></th></tr>
+            <tr><th width = "50%" align="left">Tên đăng nhập:</th><th align="left"><input type ="text" placeholder="Nhập tên đăng nhập" required/></th></tr>
+            <tr><th width = "50%" align="left">Mật khẩu:</th><th align="left"><input type ="text" required/></th></tr>
             <tr><th width = "50%" align="left">Giới tính:</th>
                 <th align="left">  
-                <form>
-                <input type="radio" name="sex" value="male" checked> Nam
-                <input type="radio" name="sex" value="female"> Nữ
-                </form>
+                
+                <input type="radio" name="sex" value="male" required> Nam
+                <input type="radio" name="sex" value="female" required> Nữ
+                
                 </th>
             </tr>
             <tr><th width = "50%" align="left">Ngày sinh</th><th align="left"><input type ="date"/></th></tr>    
-            <tr><th width = "50%" align="left">Email</th><th align="left"><input type ="email"/></th></tr>
-            <tr><th width = "50%" align="left">Ngôn ngữ lập trình yêu thích nhất:</th><th align="left"><input type ="text"/></th></tr>
+            <tr><th width = "50%" align="left">Email</th><th align="left"><input type ="email" required/></th></tr>
+            <tr><th width = "50%" align="left">Ngôn ngữ lập trình yêu thích nhất:</th><th align="left"><select name="lang">
+                <option value ="C++">C++</option>
+                <option value ="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select>
             <tr><th width = "50%" align="left">Quy định khi tham gia diễn đàn:</th><th align="left" bgcolor="white">Bài viết phải nghiêm túc, không chứa quảng cáo, không có nội dung phản cảm</th></tr>
+            <tr><th></th><th><input type="submit" value="Đăng ký"><input type="submit" value="Hủy"></th></tr>
         </table>
-
+        </form>
     </body>
 </html>
