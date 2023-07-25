@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4.4</title>
+    <script src="web12071/JS/js04.js"></script>
+</head>
+<body>
+    <table border="1px" align="center">
+        <tr><th colspan="2"><h1>CÁC PHÉP TÍNH SỐ HỌC</h1></th></tr>
+        <tr><th>Số thứ 1</th><th><input type="number" id="num1" required></th></tr>
+        <tr><th>Số thứ 2</th><th><input type="number" id="num2" required></th></tr>
+        <tr><th>Chọn phép toán</th><th align="left">
+            <input type="radio" id="cong" name="math" value="cong" required>Cộng<br><input type="radio" id="tru" name="math" value="tru" required>Trừ
+            <br><input type="radio" id="nhan" name="math" value="nhan" required>Nhân<br><input type="radio" id="chia" name="math" value="chia" required>Chia
+        </th></tr>
+        <tr><th><button id="giai" onclick="giai()">Thực hiện</button></th><th id="kq"></th></tr>
+    </table>
+</body>
+</html>

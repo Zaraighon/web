@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4.1</title>
+    <style>
+        .center{
+            margin: 0;
+            position: absolute;
+            top: 10%;
+            left: 30%;
+        }
+    </style>
+    <script src="web12071/JS/js01.js"></script>
+</head>
+<body>
+    <div class="center">
+        <h1>Chương trình tính tuổi</h1>
+
+        <table border="1px">
+            <tr><th>Nhập vào tên bạn:</th><th><input type="text" id="ten" required></th></tr>
+            <tr><th>Nhập vào năm sinh:</th><th><input type="number" id="namsinh" required></th></tr>
+        </table>
+
+    <button id="btn_tinh" onclick="tinhtuoi()">Tính tuổi</button><br>
+    <p id="kqten"></p>
+    <p id="kqtuoi"></p>
+    </div>
+</body>
+</html>

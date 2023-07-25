@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4.3</title>
+    <script src="web12071/JS/js03.js"></script>
+</head>
+<body>
+    <div class="title" id="title-center">
+        <h1 align="center">CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2</h1>
+        <h2 align="center">ax <sup>2</sup> + bx + c = 0</h2>
+    </div>
+    <table border="1px" id="table" align="center" width="50%" bgcolor="yellow">
+        <tr><th>a = </th><th><input type="number" id="a" required></th></tr>
+        <tr><th>a = </th><th><input type="number" id="b" required></th></tr>
+        <tr><th>c = </th><th><input type="number" id="c" required></th></tr>
+        <tr><th></th><th><button id="solve" onclick="solve()">Giải</button><button id="delete" onclick="resetInputs()">Xóa</button></th></tr>
+    </table>
+    <div class="div_result" id="div_result">
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>
