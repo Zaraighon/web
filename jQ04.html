@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ04</title>
+    <style>
+        .color-square {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #purple {
+            background-color: purple;
+        }
+        #big-square {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hình vuông với các màu</h1>
+    <div class="color-square" id="green"></div>
+    <div class="color-square" id="red"></div>
+    <div class="color-square" id="blue"></div>
+    <div class="color-square" id="purple"></div>
+    <div id="color-code">Màu bạn chọn là: <span id="selected-color"></span></div>
+    <div id="big-square"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.color-square').on('click', function(){
+                var color = $(this).attr('id');
+                $('#big-square').css('background-color', color);
+                $('#selected-color').text(color);
+            });
+        });
+    </script>
+</body>
+</html>

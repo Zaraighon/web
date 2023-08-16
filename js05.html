@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-05</title>
+</head>
+<body>
+    <div>
+        <script>
+            document.writeln("<h2>Bảng cửu chương</h2>");
+            document.write("<div style ='width:100%'>");
+            for (let i = 0; i <= 9; i++) 
+            {
+                document.write("<div style='width':10%; float:left; border:2px solid #000; padding:1px;'>");
+                    for (let j = 0; j <= 9; j++) 
+                    {
+                        document.write(i+" x "+j+" = "+(i*j)+"<br/>");
+                    }
+                    document.write("</div>");
+            }
+            document.write("</div>");
+        </script>
+    </div>
+</body>
+</html>

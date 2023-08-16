@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQ06</title>
+<style>
+  .rectangle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  #rectangle { background-color: red; }
+
+</style>
+</head>
+<body>
+  <div id="rectangle" class="rectangle"></div>
+  
+  <button id="moveUpBtn">Move Up</button>
+  <button id="moveDownBtn">Move Down</button>
+  <button id="moveLeftBtn">Move Left</button>
+  <button id="moveRightBtn">Move Right</button>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var step = 10;
+      var $rectangle = $(".rectangle");
+
+      $("#moveUpBtn").click(function() {
+        $rectangle.animate({top: "-=" + step + "px"});
+      });
+
+      $("#moveDownBtn").click(function() {
+        $rectangle.animate({top: "+=" + step + "px"});
+      });
+
+      $("#moveLeftBtn").click(function() {
+        $rectangle.animate({left: "-=" + step + "px"});
+      });
+
+      $("#moveRightBtn").click(function() {
+        $rectangle.animate({left: "+=" + step + "px"});
+      });
+    });
+  </script>
+</body>
+</html>

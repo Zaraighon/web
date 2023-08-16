@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-06</title>
+    <script src="web12071/JS/js06.js"></script>
+</head>
+<body>
+    <h1 align="center">ĐĂNG KÝ THÀNH VIÊN</h1>
+    <table border="1px" align="center">
+        <tr><td>Tên đăng nhập</td><td><input type="text" id="user"></td></tr>
+        <tr><td>Mật khẩu</td><td><input type="password" id="pass"></td></tr>
+        <tr><td>Ngày sinh</td><td><input type="date"></td></tr>
+        <tr><td>Giới tính</td><td><input type="radio" name="sex" value="male" id="male">Nam
+        <input type="radio" name="sex" value="female" id="female">Nữ</td></tr>
+        <tr><td>Vấn đề bạn quan tâm</td><td><select name="topic" id="topic">
+            <option value="kinhte">Kinh tế</option>
+            <option value="thethao">Thể thao</option>
+            <option value="vanhoc">Văn học nghệ thuật</option>
+        </select></td></tr>
+        <tr><td><button id="btn_signup" onclick="xuatkq()">Đăng ký</button></td><td><button id="btn_cancel" onclick="huy()">Hủy</button></td></tr>
+        <tr height="100px"><td colspan="2" id="kq"></td></tr>
+    </table>
+</body>
+</html>

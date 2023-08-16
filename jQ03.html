@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng với viền màu</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        th {
+            border: 1px solid green;
+            font-weight: bold;
+        }
+        .btn-container{
+            text-align: center;
+            margin: 20px auto;
+        }
+        button{
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Tên vật tư</th>
+            <th>Đơn vị tính</th>
+            <th>Đơn giá</th>
+        </tr>
+        <tr>
+            <td>Cát</td>
+            <td>Khối</td>
+            <td>77,000</td>
+        </tr>
+        <tr>
+            <td>Đá</td>
+            <td>KHối</td>
+            <td>90,000</td>
+        </tr>
+        <tr>
+            <td>Xi măng Hà Tiên loại 1</td>
+            <td>Bao</td>
+            <td>120,000</td>
+        </tr>
+        <tr>
+            <td>Xi măng Hà Tiên loại 2</td>
+            <td>Bao</td>
+            <td>100,000</td>
+        </tr>
+    </table>
+    <div class="btn-container">
+        <button id="bg">Đổi màu nền</button>
+        <button id="bgdefault">Màu nền mặc định</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#bg').on('click', function(){
+                $('tr:odd').css('background-color', 'pink');
+            });
+
+            $('#bgdefault').on('click', function(){
+                $('tr').css('background-color', '');
+            });
+        });
+    </script>
+</body>
+</html>

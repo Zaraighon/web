@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay Đổi Hình Ảnh</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .image-container {
+            display: inline-block;
+            position: relative;
+            padding: 30px auto;
+        }
+
+        .image {
+            width: 100px;
+            transition: transform 0.3s, width 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Di chuyển chuột để thay đổi hình ảnh</h1>
+    <div class="image-container">
+        <img class="image" src="web12071/images/dog1.jpg" alt="Hình 1">
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.image').hover(
+                function() {
+                    var originalSrc = $(this).attr('src');
+                    var newSrc = originalSrc.replace('web12071/images/dog1.jpg', 'web12071/images/dog2.jpg');
+                    $(this).attr('src', newSrc);
+                },
+                function() {
+                    var newSrc = $(this).attr('src').replace('web12071/images/dog2.jpg', 'web12071/images/dog1.jpg');
+                    $(this).attr('src', newSrc);
+                }
+            );
+        });
+    </script>
+</body>
+</html>

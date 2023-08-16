@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày giữa hai thời điểm</title>
+</head>
+<body>
+    <h2>Tính số ngày giữa hai thời điểm</h2>
+    <label for="ngay1">Từ ngày: </label>
+    <input type="date" id="ngay1">
+    <br><br>
+    <label for="ngay2">Đến ngày: </label>
+    <input type="date" id="ngay2">
+    <br><br>
+    <button type="button" id="tinhNgay">Tính số ngày</button>
+    <p id="ketQua"></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#tinhNgay').on('click', function(){
+                tinhSoNgay();
+            });
+        });
+
+        function tinhSoNgay(){
+            var ngay1 = new Date($('#ngay1').val());
+            var ngay2 = new Date($('#ngay2').val());
+
+            if(!isNaN(ngay1) && !isNaN(ngay2)){
+                var timeDiff = Math.abs(ngay2.getTime() - ngay1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                $('#ketQua').text('Số ngày là: ' + diffDays + ' ngày.');
+            } else {
+                $('#ketQua').text('Vui lòng nhập đúng định dạng ngày (yyyy-mm-dd) cho cả hai ô.');
+            }
+        }
+    </script>
+</body>
+</html>
